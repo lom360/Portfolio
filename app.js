@@ -1,13 +1,12 @@
-// create an express app
 const express = require("express")
+const fetch = require('node-fetch');
 const app = express()
-
-// use the express-static middleware
-app.use(express.static("public"))
+app.set("view engine", "ejs");
+app.use(express.static('public'))
 
 // define the first route
 app.get("/", function (req, res) {
-  res.send("<h1>Hello World!</h1>")
+  res.render('index');
 })
 
 // start the server listening for requests
