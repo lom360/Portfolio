@@ -79,6 +79,19 @@ select {
 	width: 100%;
 }
 
+.navbar-brand {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+#navbarNav {
+	font-size: 20px;
+}
+
+.nav-item {
+	margin: auto 7px;
+}
+
 header {
 	background-image: linear-gradient(rgba(50, 50, 50, 0.45), 
 	rgba(50, 50, 50, 0.45)
