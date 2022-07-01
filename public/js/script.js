@@ -34,3 +34,7 @@ window.onscroll = function() {
 		// console.log('function has been removed');
 	}
 }
+
+function scrolling() {
+	window.scrollTo(0,500);
+}
