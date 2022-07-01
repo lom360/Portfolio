@@ -93,17 +93,36 @@ select {
 }
 
 header {
+  height: 100vh;
+  color: white;
+  text-align: center;
 	background-image: linear-gradient(rgba(50, 50, 50, 0.45), 
 	rgba(50, 50, 50, 0.45)
   ),url('../img/grant-porter.jpg');
-	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}   
+} 
 
-h1 {
-	font-family: 'Alegreya' ;
+header div {
+  position: relative;
+  top: 85px;
+}
+
+#portfolio img{
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border: 7px solid #fff;
+  border-radius: 50%
+}
+
+#my-name {
+  margin: 10px auto;
+}
+
+#my-name h1 {
+  font-size: 75px;
 }
 
 main, section, .test {
