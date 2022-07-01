@@ -73,6 +73,10 @@ select {
   }
 }
 
+nav {
+  z-index: 3;
+}
+
 .navbar {
 	position: fixed;
 	top: 0;
@@ -96,8 +100,8 @@ header {
   height: 100vh;
   color: white;
   text-align: center;
-	background-image: linear-gradient(rgba(50, 50, 50, 0.45), 
-	rgba(50, 50, 50, 0.45)
+	background-image: linear-gradient(rgba(25, 25, 25, 0.45), 
+	rgba(25, 25, 25, 0.45)
   ),url('../img/grant-porter.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
