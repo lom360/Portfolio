@@ -25,12 +25,21 @@ window.onscroll = function() {
 	var element = document.getElementById('navigation');
 	if(currentScrollPos > 10 && toggleNav == false) {
 		element.classList.add('bg-dark');
+		$("#navigation").animate({'height':'53px'}, 0.25);
+		$("#brand").animate({'font-size':'25px'},2);
 		toggleNav = !toggleNav;
 	}
 	else if(currentScrollPos == 0 && toggleNav == true) {
 		element.classList.remove('bg-dark');
+		$("#navigation").animate({'height':'77px'}, 0.25);
+		$("#brand").animate({'font-size':'35px'},2);
 		toggleNav = !toggleNav;
 	}
+}
+
+function changeHeight() {
+	var element = document.getElementById('navigation');
+	element.animate({height:500},500);
 }
 
 function scrolling() {

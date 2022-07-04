@@ -73,8 +73,14 @@ select {
   }
 }
 
+@keyframes change-nav-height {
+
+}
+
 #navigation {
-  height: 75px;
+  height: 77px;
+  transition: ease-in;
+  transition-duration: 0.25s;
 }
 
 nav {
@@ -87,8 +93,8 @@ nav {
 	width: 100%;
 }
 
-.navbar-brand h2{
-	font-size: 25px;
+#brand{
+	font-size: 35px;
 	font-weight: 700;
   color: #C1E51A;
 }
