@@ -73,6 +73,10 @@ select {
   }
 }
 
+#navigation {
+  height: 75px;
+}
+
 nav {
   z-index: 3;
 }
@@ -83,24 +87,29 @@ nav {
 	width: 100%;
 }
 
-.navbar-brand {
+.navbar-brand h2{
 	font-size: 25px;
 	font-weight: 700;
+  color: #C1E51A;
 }
 
 #navbarNav {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .nav-item {
 	margin: auto 7px;
 }
 
+.nav-link span:hover {
+  color: #C1E51A;
+}
+
 header {
   height: 100vh;
   color: white;
   text-align: center;
-	background-image: linear-gradient(rgba(25, 25, 25, 0.45), 
+	background-image: linear-gradient(rgba(15, 15, 15, 0.65), 
 	rgba(25, 25, 25, 0.45)
   ),url('../img/grant-porter.jpg');
 	background-position: center;

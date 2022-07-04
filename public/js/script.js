@@ -26,12 +26,10 @@ window.onscroll = function() {
 	if(currentScrollPos > 10 && toggleNav == false) {
 		element.classList.add('bg-dark');
 		toggleNav = !toggleNav;
-		// console.log('function has been added')
 	}
 	else if(currentScrollPos == 0 && toggleNav == true) {
 		element.classList.remove('bg-dark');
 		toggleNav = !toggleNav;
-		// console.log('function has been removed');
 	}
 }
 
