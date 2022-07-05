@@ -25,15 +25,15 @@ window.onscroll = function() {
 	var element = document.getElementById('navigation');
 	if(currentScrollPos > 10 && toggleNav == false) {
 		element.classList.add('bg-dark');
-		$("#navigation").animate({'height':'53px'}, 0.25);
-		$("#brand").animate({'font-size':'25px'},2);
+		$("#navigation").animate({'height':'53px'},0.0001);
+		$("#brand").animate({'font-size':'25px'},0.0001);
 		$("#navbarNav").css('right','0px');
 		toggleNav = !toggleNav;
 	}
 	else if(currentScrollPos == 0 && toggleNav == true) {
 		element.classList.remove('bg-dark');
-		$("#navigation").animate({'height':'77px'}, 0.25);
-		$("#brand").animate({'font-size':'35px'},2);
+		$("#navigation").animate({'height':'77px'},0.0001);
+		$("#brand").animate({'font-size':'34px'},0.0001);
 		$("#navbarNav").css('right','12px');
 		toggleNav = !toggleNav;
 	}
