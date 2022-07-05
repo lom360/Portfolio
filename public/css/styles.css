@@ -94,13 +94,15 @@ nav {
 }
 
 #brand{
-	font-size: 35px;
+	font-size: 34px;
 	font-weight: 700;
   color: #C1E51A;
 }
 
 #navbarNav {
 	font-size: 18px;
+  position: relative;
+  right: 12px;
 }
 
 .nav-item {

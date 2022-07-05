@@ -27,12 +27,14 @@ window.onscroll = function() {
 		element.classList.add('bg-dark');
 		$("#navigation").animate({'height':'53px'}, 0.25);
 		$("#brand").animate({'font-size':'25px'},2);
+		$("#navbarNav").css('right','0px');
 		toggleNav = !toggleNav;
 	}
 	else if(currentScrollPos == 0 && toggleNav == true) {
 		element.classList.remove('bg-dark');
 		$("#navigation").animate({'height':'77px'}, 0.25);
 		$("#brand").animate({'font-size':'35px'},2);
+		$("#navbarNav").css('right','12px');
 		toggleNav = !toggleNav;
 	}
 }
