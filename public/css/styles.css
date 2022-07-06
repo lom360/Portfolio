@@ -111,6 +111,7 @@ nav {
 
 .nav-link span:hover {
   color: #C1E51A;
+  text-decoration: underline;
 }
 
 header {
@@ -149,4 +150,15 @@ header div {
 
 main, section, .test {
 	height: 1000px;
+}
+
+#portfolio-btn {
+  margin: 50px auto;
+}
+
+#portfolio-btn button{
+  height: 75px;
+  width: 200px;
+  font-size: 1.5em;
+  font-weight: 600;
 }
