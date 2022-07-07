@@ -1,23 +1,23 @@
-// $("#generate").click(function(){
-// 	var lorem = $("#lorem");
-// 	lorem.html("");
-// 	var quantity = $("#quantity")[0].valueAsNumber;
-// 	var data = ["Lorem ipsum", "quia dolor sit", "amet", "consectetur"];
-// 	for(var i = 0; i < quantity; i++){
-// 		lorem.append("<p>"+data[i]+"</p>");
-// 	}
+const scrollToAbout = document.querySelector("#toAbout");
+const scrollToSkills = document.querySelector("#toSkills");
+const scrollToProjects = document.querySelector("toProjects");
+const scrollToContact = document.querySelector("Contact");
+
+scrollToAbout.addEventListener("click", function () {
+	$("html, body").animate({scrollTop: $("#about").offset().top - 53},1);
+})
+
+// scrollToSkills.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#skills").offset().top - 53},1);
 // })
 
-// $("#copy").click(function() {
-// 	var range = document.createRange();
-// 	range.selectNode($("#lorem")[0]);
-// 	window.getSelection().removeAllRanges();
-// 	window.getSelection().addRange(range);
-// 	document.execCommand("copy");
-// 	window.getSelection().removeAllRanges();
-// 	}
-// )
+// scrollToProjects.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#projects").offset().top - 53},1);
+// })
 
+// scrollToContact.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#contact").offset().top - 53},1);
+// })
 
 toggleNav = false;
 window.onscroll = function() {
@@ -39,11 +39,11 @@ window.onscroll = function() {
 	}
 }
 
-function changeHeight() {
-	var element = document.getElementById('navigation');
-	element.animate({height:500},500);
-}
+// function changeHeight() {
+// 	var element = document.getElementById('navigation');
+// 	element.animate({height:500},500);
+// }
 
-function scrolling() {
-	window.scrollTo(0,500);
-}
+// function scrolling() {
+// 	window.scrollTo(0,500);
+// }
