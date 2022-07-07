@@ -94,10 +94,16 @@ nav {
 	width: 100%;
 }
 
+/* .navbar:first-child {
+  width: 100px;
+} */
+
 #brand{
 	font-size: 34px;
 	font-weight: 700;
   color: #C1E51A;
+  position: relative;
+  left: 100px;
 }
 
 #navbarNav {
