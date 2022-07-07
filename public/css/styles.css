@@ -84,6 +84,7 @@ select {
 }
 
 nav {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   z-index: 3;
 }
 
@@ -109,9 +110,8 @@ nav {
 	margin: auto 7px;
 }
 
-.nav-link span:hover {
-  color: #C1E51A;
-  text-decoration: underline;
+.nav-link:hover{
+  color: #C1E51A !important;
 }
 
 header {
