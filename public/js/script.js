@@ -38,15 +38,15 @@ window.onscroll = function() {
 }
 
 function controlNavColors(scrollPos) {
-	if(scrollPos >= 3908) {
+	if(scrollPos >= 3448) {
 		$('.nav-link').removeClass('addNavColor');
 		$('#toContact').addClass('addNavColor');
 	}
-	else if(scrollPos >= 2908) {
+	else if(scrollPos >= 2448) {
 		$('.nav-link').removeClass('addNavColor');
 		$('#toProjects').addClass('addNavColor');
 	}
-	else if(scrollPos >= 1908) {
+	else if(scrollPos >= 1448) {
 		$('.nav-link').removeClass('addNavColor');
 		$('#toSkills').addClass('addNavColor');
 	}

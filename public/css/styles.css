@@ -85,6 +85,10 @@ select {
   transition-duration: 0.25s;
 }
 
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 nav {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   z-index: 3;
@@ -183,6 +187,6 @@ header div {
   font-weight: 600c;
 }
 
-main, section, .test {
+section, .test {
 	height: 1000px;
 }
