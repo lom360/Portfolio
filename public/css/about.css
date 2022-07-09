@@ -113,9 +113,6 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-    main {
-        /* padding: 0px; */
-    }
     main .container-fluid div {
         margin: 0 auto;
     }
@@ -133,5 +130,9 @@ main {
     
     #main-content {
         min-width: 350px;
+    }
+
+    .modal-content {
+        width: 480px;
     }
 }
