@@ -36,12 +36,6 @@ main {
     line-height: 27px;
 }
 
-@media only screen and (max-width: 865px) {
-    main {
-        height: 870px;
-    }
-}
-
 #icons a {
     margin-right: 10px;
     color: black;
@@ -95,3 +89,23 @@ main {
 #skills {
     background-color: #1AC1E5;
 }
+
+@media only screen and (max-width: 867px) {
+    main {
+        height: 870px;
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main .container-fluid div {
+        padding: 10px;
+        margin: 0 auto;
+    }
+}
+
+/* @media only screen and (max-width: 767px) {
+    main {
+        padding: 50px 150px;
+    }
+} */
