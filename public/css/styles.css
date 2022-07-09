@@ -193,9 +193,43 @@ header div {
   height: 75px;
   width: 200px;
   font-size: 1.5em;
-  font-weight: 600c;
+  font-weight: 500;
 }
 
 section, .test {
 	height: 1000px;
+}
+
+
+@media only screen and (max-width: 991px) {
+  #my-name h1 {
+    font-size: 63px;
+  }
+
+  header div {
+    position: relative;
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #portfolio-btn {
+    position: relative;
+    right: 50px;
+  }
+
+  #portfolio img{
+    height: 195px;
+    width: 195px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #my-name h1 {
+    font-size: 41px;
+  }
+
+  #summary h3 {
+    font-size: 27px;
+  }
 }
