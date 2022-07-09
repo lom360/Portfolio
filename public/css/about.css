@@ -40,8 +40,58 @@ main {
     main {
         height: 870px;
     }
+}
 
-    #main-image {
-        justify-content: flex-center;
-    }
+#icons a {
+    margin-right: 10px;
+    color: black;
+    transition: color 1s;
+    /* text-decoration: none; */
+}
+
+#icons a:hover {
+    color: #C1E51A;
+}
+
+.modal-dialog {
+    position: absolute;
+    top: 0;
+    right: 300px;
+    bottom: 0;
+    left: 0;
+    /* z-index: 10040; */
+    /* overflow: auto; */
+    /* overflow-y: auto; */
+  }
+
+.modal-content {
+    width: 735px;
+}
+
+.resume-btn {
+    height: 55px;
+    width: 125px;
+    position: relative;
+    bottom: 18px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    font-weight: 700;
+    transition: background-color 1s;
+}
+
+.resume-btn:hover {
+    color:black !important;
+    background-color: #C1E51A;
+    border-color: #C1E51A;
+}
+
+.resume-btn i {
+    margin-right: 3px;
+}
+
+#skills {
+    background-color: #1AC1E5;
 }
