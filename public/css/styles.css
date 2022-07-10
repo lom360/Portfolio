@@ -208,7 +208,7 @@ section, .test {
 
   header div {
     position: relative;
-    top: 60px;
+    top: 40px;
   }
 }
 
@@ -224,12 +224,42 @@ section, .test {
   }
 }
 
+@media only screen and (max-height: 1000px) {
+  header {
+    height: 1000px;
+  }
+}
+
 @media only screen and (max-width: 750px) {
+  /* header {
+    height: 700px;
+  } */
+
+  header .containter {
+    margin: 0px;
+  }
+
   #my-name h1 {
     font-size: 41px;
   }
 
   #summary h3 {
-    font-size: 27px;
+    font-size: 21px;
   }
 }
+
+@media only screen and (max-width: 667px) {
+  header .containter {
+    margin: 0px;
+  }
+
+  #my-name h1 {
+    font-size: 41px;
+  }
+
+  #portfolio img{
+    height: 175px;
+    width: 175px;
+  }
+}
+
