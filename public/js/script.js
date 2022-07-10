@@ -5,7 +5,7 @@ const scrollToProjects = document.querySelector("#toProjects");
 const scrollToContact = document.querySelector("#toContact");
 const enterPortfolio = document.querySelector("#portfolio-btn button");
 
-scrollToAbout.addEventListener("click", function () {
+scrollToTop.addEventListener("click", function () {
 	$("html, body").animate({scrollTop: 0},1);
 })
 
@@ -51,7 +51,6 @@ function controlNavColors(scrollPos) {
 		$('#toSkills').addClass('addNavColor');
 	}
 	else if(scrollPos >= 908) {
-		// $('#toAbout').css('color','#C1E51A')
 		$('.nav-link').removeClass('addNavColor');
 		$('#toAbout').addClass('addNavColor');
 	}
@@ -74,12 +73,3 @@ function navBarToggle(currentScrollPos, element) {
 		toggleNav = !toggleNav;
 	}
 }
-
-// function changeHeight() {
-// 	var element = document.getElementById('navigation');
-// 	element.animate({height:500},500);
-// }
-
-// function scrolling() {
-// 	window.scrollTo(0,500);
-// }
