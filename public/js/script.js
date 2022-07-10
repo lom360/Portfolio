@@ -5,29 +5,30 @@ const scrollToProjects = document.querySelector("#toProjects");
 const scrollToContact = document.querySelector("#toContact");
 const enterPortfolio = document.querySelector("#portfolio-btn button");
 
-scrollToTop.addEventListener("click", function () {
-	$("html, body").animate({scrollTop: 0},1);
-})
+// scrollToTop.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: 0},1);
+// })
 
-scrollToAbout.addEventListener("click", function () {
-	$("html, body").animate({scrollTop: $("#about").offset().top - 53},1);
-})
+// scrollToAbout.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#about").offset().top - 53},1);
+// })
 
-scrollToSkills.addEventListener("click", function () {
-	$("html, body").animate({scrollTop: $("#skills").offset().top - 53},1);
-})
+// scrollToSkills.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#skills").offset().top - 53},1);
+// })
 
-scrollToProjects.addEventListener("click", function () {
-	$("html, body").animate({scrollTop: $("#projects").offset().top - 53},1);
-})
+// scrollToProjects.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#projects").offset().top - 53},1);
+// })
 
-scrollToContact.addEventListener("click", function () {
-	$("html, body").animate({scrollTop: $("#contact").offset().top - 53},1);
-})
+// scrollToContact.addEventListener("click", function () {
+// 	$("html, body").animate({scrollTop: $("#contact").offset().top - 53},1);
+// })
 
-enterPortfolio.addEventListener("click", function() {
-	$("html, body").animate({scrollTop: $("#about").offset().top - 53},1);
-})
+// enterPortfolio.addEventListener("click", function() {
+// 	$("html, body").animate({scrollTop: $("#about").offset().top - 53},1);
+// })
+
 
 toggleNav = false;
 window.onscroll = function() {

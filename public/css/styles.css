@@ -264,3 +264,7 @@ section, .test {
   }
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
