@@ -86,10 +86,6 @@ main {
     margin-right: 3px;
 }
 
-#skills {
-    background-color: #1AC1E5;
-}
-
 @media only screen and (max-width: 1333px) {
     main {
         /* height: 870px; */

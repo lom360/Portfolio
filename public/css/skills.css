@@ -1,0 +1,16 @@
+#skills {
+    padding: 100px 0px;
+    height: 1000px;
+    color: white;
+    background-color: #1AC1E5;
+    background-color: #A41AE5;
+}
+
+#skills-title{
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+#skill-content1 {
+    height: 300px;
+}
