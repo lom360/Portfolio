@@ -1,8 +1,9 @@
 #skills {
-    padding: 100px 0px;
-    height: 1000px;
-    color: white;
-    background-color: #1AC1E5;
+    padding: 100px 300px;
+    height: 1500px;
+    color: #EDEEEF;
+    /* color: white; */
+    /* background-color: #1AC1E5; */
     background-color: #A41AE5;
 }
 
@@ -11,6 +12,28 @@
     font-size: 3.5rem;
 }
 
-#skill-content1 {
+/* #skill-content {
     height: 300px;
+} */
+
+#skill-content div {
+    height: 300px;
+    min-width: 300px;
+}
+
+#skill-content div i{
+    height: 125px;
+    width: 125px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#skill-content div:first-child i {
+    padding-top: 20px;
+    padding-left: 13px;
+}
+
+#skill-content div:nth-child(2) i {
+    padding-top: 25px;
+    padding-left: 14px;
 }
