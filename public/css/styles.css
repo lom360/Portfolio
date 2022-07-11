@@ -190,9 +190,17 @@ header div {
   margin: 50px auto;
 }
 
-#portfolio-btn button{
+/* #portfolio-btn button{
   height: 75px;
   width: 200px;
+  font-size: 1.5em;
+  font-weight: 500;
+} */
+
+#portfolio-btn a {
+  height: 75px;
+  width: 200px;
+  padding: 17px 0;
   font-size: 1.5em;
   font-weight: 500;
 }
