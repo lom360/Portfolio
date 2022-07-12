@@ -109,6 +109,7 @@ nav {
 	font-size: 34px;
 	font-weight: 700;
   color: #C1E51A;
+  color: #8bd450;
   /* color: #47B864; */
   /* color: #ACC936; */
   position: relative;
@@ -143,7 +144,8 @@ nav {
 }
 
 .addNavColor {
-  color: #C1E51A !important;
+  /* color: #C1E51A !important; */
+  color: #A7D761 !important;
 }
 
 .theme-color {
