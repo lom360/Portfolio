@@ -45,6 +45,7 @@ main {
 
 #icons a:hover {
     color: #C1E51A;
+    color: #8bd450;
 }
 
 .modal-dialog {
@@ -79,7 +80,9 @@ main {
 .resume-btn:hover {
     color:black !important;
     background-color: #C1E51A;
+    background-color: #8bd450;
     border-color: #C1E51A;
+    border-color: #8bd450;
 }
 
 .resume-btn i {

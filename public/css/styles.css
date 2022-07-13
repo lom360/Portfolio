@@ -108,6 +108,7 @@ nav {
 #brand{
 	font-size: 34px;
 	font-weight: 700;
+  /* below color was the original */
   color: #C1E51A;
   color: #8bd450;
   /* color: #47B864; */
@@ -132,6 +133,7 @@ nav {
 
 .nav-link {
   color: white !important;
+  font-weight: bolder;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
@@ -141,17 +143,19 @@ nav {
 
 .nav-link:hover{
   color: #C1E51A !important;
+  color: #8bd450 !important;
 }
 
 .addNavColor {
   /* color: #C1E51A !important; */
   color: #A7D761 !important;
+  color: #8bd450 !important;
 }
 
 .theme-color {
   color: #C1E51A !important;
   color: #8bd450 !important;
-  color: #8AB44B !important;
+  /* color: #8AB44B !important; */
 }
 
 header {
@@ -162,7 +166,7 @@ header {
 	/* background-image: linear-gradient(rgba(25, 25, 25, .90), 
 	rgba(25, 25, 25, 0.50)
   ),url('../img/grant-porter.jpg'); */
-  background-image: linear-gradient(rgba(15, 15, 15, .75), 
+  background-image: linear-gradient(rgba(0, 0, 0, .60), 
 	rgba(25, 25, 25, 0.45)
   ),url('../img/grant-porter.jpg');
 	background-position: center;
@@ -277,7 +281,6 @@ header div {
     width: 175px;
   }
 }
-
 
 html {
   scroll-behavior: smooth;
