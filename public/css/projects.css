@@ -5,13 +5,23 @@
 }
 
 #projects-content a {
-    /* position: fixed; */
-    /* padding: 0px 30px; */
     margin: 15px 15px;
     height: 500px;
     width: 450px;
     color: #212529;
     text-decoration: none;
+    /* background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/java-qr.png'); */
+    /* background-repeat: no-repeat;
+    background-size: 450px 500px;
+    background-position: center center; */
+    /* box-shadow: 5px 5px 10px;
+    transition: width 1s, height 1s, margin 1s; */
+}
+
+.box {
+    height: inherit;
+    width: inherit;
     background-image: linear-gradient(rgba(33, 37, 41, .2), 
 	rgba(33, 37, 41, 0.2) ),url('../img/java-qr.png');
     background-repeat: no-repeat;
@@ -21,21 +31,23 @@
     transition: width 1s, height 1s, margin 1s;
 }
 
-#projects-content a:hover {
+#projects-content a:hover > div{
     background-image: linear-gradient(rgba(117, 70, 185, .80), 
 	rgba(117, 70, 185, 0.80) ),url('../img/java-qr.png');
     height: 450px;
     width: 400px;
-    margin: 40px 40px;
+    margin: 30px 35px;
+    color: #212529;
+    text-decoration: none;
 }
-.box {
+.box-header {
     padding-top: 7px;
     height: 50px;
     width: 100%;
     text-align: center;
     background-color: #343a40;
 }
-.box h3{
+.box-header h3{
     color: #8bd450;
     font-weight: 600;
 }
