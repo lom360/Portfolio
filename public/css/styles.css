@@ -1,5 +1,6 @@
 @import "about.css";
 @import "skills.css";
+@import "projects.css";
 
 /* Box sizing rules */
 *,
@@ -213,10 +214,6 @@ header div {
   padding: 17px 0;
   font-size: 1.5em;
   font-weight: 500;
-}
-
-.test {
-	height: 1000px;
 }
 
 

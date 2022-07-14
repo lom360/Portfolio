@@ -85,6 +85,10 @@ main {
     border-color: #8bd450;
 }
 
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: none;
+}
+
 .resume-btn i {
     margin-right: 3px;
 }
