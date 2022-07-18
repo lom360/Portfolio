@@ -1,7 +1,17 @@
 #projects {
-    height: 3000px;
+    padding: 100px 0px;
+    height: 1300px;
     max-width: 1500px;
     /* background-color: #edeeef; */
+}
+
+#projects-title {
+    margin-bottom: 75px;
+}
+
+#projects-title div h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
 }
 
 #projects-content a {
