@@ -61,3 +61,21 @@
     color: #8bd450;
     font-weight: 600;
 }
+
+.modal-footer {
+    padding: 10px;
+    height: 85px !important;
+}
+
+.modal-link {
+    position: relative;
+    top: 0px;
+    height: 55px !important;
+    /* width: 1355px !important; */
+    width: 100% !important;
+}
+
+.modal-link span{
+    position: relative;
+    top: 5px;
+}
