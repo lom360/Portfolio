@@ -1,0 +1,9 @@
+#contact {
+    height: 700px;
+    /* background-color: red; */
+    background: url("../img/purple_world1.png") no-repeat center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
