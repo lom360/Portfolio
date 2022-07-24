@@ -39,19 +39,23 @@ window.onscroll = function() {
 }
 
 function controlNavColors(scrollPos) {
-	if(scrollPos >= 3448) {
+	contactPos = $('#contact').offset().top - 53;
+	projectsPos = $('#projects').offset().top - 53;
+	skillsPos = $('#skills').offset().top - 53;
+	aboutPos = $('#about').offset().top - 53;
+	if(scrollPos >= contactPos) { // 3448
 		$('.nav-link').removeClass('addNavColor');
 		$('#toContact').addClass('addNavColor');
 	}
-	else if(scrollPos >= 2448) {
+	else if(scrollPos >= projectsPos) { // 2448
 		$('.nav-link').removeClass('addNavColor');
 		$('#toProjects').addClass('addNavColor');
 	}
-	else if(scrollPos >= 1448) {
+	else if(scrollPos >= skillsPos) { // 1448
 		$('.nav-link').removeClass('addNavColor');
 		$('#toSkills').addClass('addNavColor');
 	}
-	else if(scrollPos >= 908) {
+	else if(scrollPos >= aboutPos) { // 908
 		$('.nav-link').removeClass('addNavColor');
 		$('#toAbout').addClass('addNavColor');
 	}
