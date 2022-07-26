@@ -69,12 +69,14 @@ function navBarToggle(currentScrollPos, element) {
 		element.classList.add('bg-dark');
 		$("#navigation").animate({'height':'53px'},0);
 		$("#brand").animate({'font-size':'25px'},200);
+		// $(".nav-menu").animate({'left':'326px'});
 		toggleNav = !toggleNav;
 	}
 	else if(currentScrollPos == 0 && toggleNav == true) {
 		element.classList.remove('bg-dark');
 		$("#navigation").animate({'height':'77px'},0);
 		$("#brand").animate({'font-size':'34px'},200);
+		// $(".nav-menu").animate({'left':'300px'});
 		toggleNav = !toggleNav;
 	}
 }

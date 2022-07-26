@@ -3,6 +3,7 @@
 @import "projects.css";
 @import "contact.css";
 @import "footer.css";
+@import "nav.css";
 
 /* Box sizing rules */
 *,
@@ -83,70 +84,14 @@ select {
 
 }
 
-#navigation {
+/* #navigation {
   height: 77px;
   transition: ease-in;
   transition-duration: 0.25s;
-}
+} */
 
 body {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-nav {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  z-index: 3;
-}
-
-.navbar {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-/* .navbar:first-child {
-  width: 100px;
-} */
-
-#brand{
-	font-size: 34px;
-	font-weight: 700;
-  /* below color was the original */
-  color: #C1E51A;
-  color: #8bd450;
-  /* color: #47B864; */
-  /* color: #ACC936; */
-  position: relative;
-  left: 100px;
-}
-
-#navbarNav {
-	font-size: 18px;
-  position: relative;
-  right: 12px;
-}
-
-.nav-item {
-	margin: auto 7px;
-}
-
-/* a {
-  color: white !important;
-} */
-
-.nav-link {
-  color: white !important;
-  font-weight: bolder;
-}
-
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-  /* color: rgba(255,255,255,.5); */
-  color: white;
-}
-
-.nav-link:hover{
-  color: #C1E51A !important;
-  color: #8bd450 !important;
 }
 
 .addNavColor {
