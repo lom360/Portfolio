@@ -1,6 +1,6 @@
 #projects {
     padding: 100px 50px;
-    height: 1300px;
+    height: 1450px;
     max-width: 1500px;
     max-width: 100%;
     /* background-color: #edeeef; */
@@ -81,19 +81,27 @@
     top: 5px;
 }
 
-@media only screen and (max-width: 1426px) {
-    #projects {
-        height: 1900px;
-    }
-}
-
-@media only screen and (max-width: 1346px) {
+@media only screen and (max-width: 1526px) {
     #projects {
         padding: 50px;
-        height: 3500px;
+        height: 1800px;
     }
 
     #projects-title {
         margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1046px) {
+    #projects {
+        padding: 10px;
+        height: 1700px;
+    }
+}
+
+@media only screen and (max-width: 966px) {
+    #projects {
+        padding: 10px;
+        height: 3300px;
     }
 }
