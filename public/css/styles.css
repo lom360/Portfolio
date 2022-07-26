@@ -31,7 +31,7 @@ ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
-
+html, body {width:100%; overflow-x:hidden;}
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;

@@ -7,40 +7,36 @@
 nav {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     z-index: 3;
-    display: flex;
-    justify-content: space-evenly;
     position: fixed;
     width: 100%;
 }
   
   #navigation {
     height: 77px;
-    position: fixed;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px 24px;
+    /* padding: 0px 24px; */
     top: 0;
     transition: ease-in;
     transition-duration: 0.25s;
   }
   
 .nav-menu {
+    padding: 0px;
+    margin: 0px;
+    width: 35%;
     position: relative;
-    top: 7px;
-    left: 300px;
     display: flex;
-    justify-content: center !important;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
-    /* transition: linear;
-    transition-duration: 0s; */
 }
 
-/* .nav-item {
-    margin: 0 !important;
-} */
-#navbar-brand {
-    width: 288px !important;
+.the-brand {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
 }
 
   #brand{
@@ -48,18 +44,17 @@ nav {
     font-weight: 700;
     color: #8bd450;
     position: relative;
-    left: 100px;
   }
   
-  #navbarNav {
+  /* #navbarNav {
     font-size: 18px;
     position: relative;
     right: 12px;
-  }
+  } */
   
-  .nav-item {
+  /* .nav-item {
       margin: auto;
-  }
+  } */
 
   
   .nav-link {
@@ -78,7 +73,11 @@ nav {
     color: #8bd450 !important;
   }
 
-  @media only screen and(max-width: 991px) {
+@media only screen and(max-width: 1046px) {
+
+}
+
+  @media only screen and(max-width: 600px) {
     .hamburger {
         display: block;
     }
