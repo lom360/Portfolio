@@ -103,7 +103,7 @@ var resizeId;
 window.addEventListener('resize', function() {
 	// checkSize();
     clearTimeout(resizeId);
-    resizeId = setTimeout(doneResizing, 500);
+    resizeId = setTimeout(doneResizing, 50);
 });
 
 function doneResizing(){
@@ -148,10 +148,10 @@ function addNavBar(element) {
 	// toggleNav = !toggleNav;
 }
 
-function removeNavBar(element) {
+function removeNavBar(element,spd1,spd2) {
 	element.classList.remove('bg-dark');
 	$("#navigation").animate({'height':'77px'},0);
-	$("#brand").animate({'font-size':'34px'},200);
+	$("#brand").animate({'font-size':'34px'},100);
 	// toggleNav = !toggleNav;
 }
 // function navBarToggle(element) {
