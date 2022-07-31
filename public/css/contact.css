@@ -1,13 +1,36 @@
 #contact {
+    padding: 100px 30px;
     height: 765px;
     /* background-color: red; */
     background: url("../img/nasa1.png") no-repeat center; 
+    /* background-image: linear-gradient(rgba(0, 0, 0, .60), 
+	rgba(25, 25, 25, 0.45)
+  ),url('../img/nasa1.png'); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: white;
+    text-align: center;
 }
 
-#input-fields {
-    width: 500px;
+
+.form-control {
+    height: 3.9rem;
+    font-size: 1.3rem;
+}
+
+.contact-btn {
+    height: 75px;
+    width: 200px;
+    background-color: #7546B9;
+    border-color: #7546B9;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: ease-in 0.25s;
+}
+
+.contact-btn:hover {
+    background-color: #8bd450;
+    border-color: #8bd450;
 }
