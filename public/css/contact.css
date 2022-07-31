@@ -14,6 +14,13 @@
     text-align: center;
 }
 
+#info h1 {
+    margin-bottom: 10px;
+}
+
+#info h5 {
+    margin-bottom: 70px;
+}
 
 .form-control {
     height: 3.9rem;
@@ -21,6 +28,7 @@
 }
 
 .contact-btn {
+    margin-top: 50px;
     height: 75px;
     width: 200px;
     background-color: #7546B9;
