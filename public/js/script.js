@@ -169,6 +169,88 @@ function removeNavBar(element,spd1,spd2) {
 // 	}
 // }
 
+// $(function()
+// {
+//     function after_form_submitted(data)
+//     {
+//         if(data.result == 'success')
+//         {
+//             $('form#contact-form').hide();
+//             $('#success_message').show();
+//             $('#error_message').hide();
+//         }
+//         else
+//         {
+//             $('#error_message').append('<ul></ul>');
+
+//             jQuery.each(data.errors,function(key,val)
+//             {
+//                 $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+//             });
+//             $('#success_message').hide();
+//             $('#error_message').show();
+
+//             //reverse the response on the button
+//             $('button[type="button"]', $form).each(function()
+//             {
+//                 $btn = $(this);
+//                 label = $btn.prop('orig_label');
+//                 if(label)
+//                 {
+//                     $btn.prop('type','submit' );
+//                     $btn.text(label);
+//                     $btn.prop('orig_label','');
+//                 }
+//             });
+
+//         }//else
+//     }
+
+// 	$('#contact-form').submit(function(e)
+//       {
+//         e.preventDefault();
+
+//         $form = $(this);
+//         //show some response on the button
+//         $('button[type="submit"]', $form).each(function()
+//         {
+//             $btn = $(this);
+//             $btn.prop('type','button' );
+//             $btn.prop('orig_label',$btn.text());
+//             $btn.text('Sending ...');
+//         });
+
+
+//                     $.ajax({
+//                 type: "POST",
+//                 url: 'mail.php',
+//                 data: $form.serialize(),
+//                 success: after_form_submitted,
+//                 dataType: 'json'
+//             });
+
+//       });
+// });
+
+// const form = document.querySelector('#contact-form');
+// function sendMsg(e) {
+// 	const name = document.querySelector('#name'),
+// 	  email = document.querySelector('#email'),
+// 	  message = document.querySelector('#message');
+
+// 	Email.send({
+// 		SecureToken : "1959e8eb-aace-442d-9d5d-a242399442ba",
+// 		To : 'sarom_thin@outlook.com',
+// 		From : email.value,
+// 		Subject : "Contact Form",
+// 		Body : message.value
+// 	}).then(
+// 	message => alert(message)
+// 	);
+// }
+// form.addEventListener('submit', sendMsg);
+
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
