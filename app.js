@@ -15,7 +15,7 @@ var urlencodedParser = bodyParser.urlencoded({extended:false});
 // const server = http.Server(app);
 // const http = require("http"); // for mailing
 // const path = require("path"); // for mailing
-// const nodemailer = require("nodemailer"); // for mailing
+const nodemailer = require("nodemailer"); // for mailing
 // var port = 500;
 // app.set("port",port);
 app.use(express.json());
@@ -28,36 +28,35 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  // var email = req.body.email;
-  // var name = req.body.name;
-  // var subject = req.body.name;
-  // var message = req.body.message;
+  var email = req.body.email;
+  var name = req.body.name;
+  var subject = req.body.name;
+  var message = req.body.message;
 
-  // var transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: 'lom360@mail.fresnostate.edu',
-  //     pass: 'mcmxegxcmyysqyxs'
-  //   }
-  // });
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'lom360@mail.fresnostate.edu',
+      pass: 'mcmxegxcmyysqyxs'
+    }
+  });
 
-  // var mailOptions = {
-  //   from: email,
-  //   to: 'lom360@mail.fresnostate.edu',
-  //   subject: subject,
-  //   text: message
-  // };
+  var mailOptions = {
+    from: email,
+    to: 'sarom_thin@outlook.com',
+    subject: subject,
+    text: message
+  };
 
-  // transporter.sendMail(mailOptions, function(error, info) {
-  //   if(error) {
-  //     console.log(error);
-  //   } else {
-  //     console.log("Email Sent: " + info.response)
-  //   }
-  //   res.redirect("/");
-  // })
-  // console.log("Testing");
-  res.redirect("/")
+  transporter.sendMail(mailOptions, function(error, info) {
+    if(error) {
+      console.log(error);
+    } else {
+      console.log("Email Sent: " + info.response)
+    }
+    res.redirect("/");
+  })
+  res.redirect("/#contact")
 })
 
 // Initialize Web Server
