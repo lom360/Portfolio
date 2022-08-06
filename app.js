@@ -27,11 +27,14 @@ app.get("/", function (req, res) {
   res.render('index');
 });
 
+const { body, validationResult } = require('express-validator');
 app.post("/", function (req, res) {
   var email = req.body.email;
   var name = req.body.name;
   var subject = req.body.name;
   var message = req.body.message;
+
+  // validateForm(email, name, subject, message);
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
