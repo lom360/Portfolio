@@ -28,12 +28,17 @@ app.get("/", function (req, res) {
 app.post("/", urlencodeParser, [
     check('email', 'Please enter a valid email. i.e. @example.com')
       .isEmail()
-      .normalizeEmail()
+      .normalizeEmail(),
+    check('name', 'Please enter a name with at least 1 character')
+      .isLength({min: 1}),
+    check('message', 'Please enter a message with at least 5 character')
+      .isLength({min: 1})
 ], function (req, res) {
   const errors = validationResult(req);
+  // var alert;
   if(!errors.isEmpty()) {
     const alert = errors.array()
-    // res.render('index', {alert})
+    res.render('index', {alert})
   }
 
   var email = req.body.email;
@@ -66,7 +71,8 @@ app.post("/", urlencodeParser, [
   //   }
   //   res.redirect("/");
   // })
-  res.redirect("/#contact"), {alert};
+  // console.log(alert);
+  // res.redirect("/#contact");
 })
 
 // Initialize Web Server
