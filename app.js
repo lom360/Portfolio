@@ -40,6 +40,32 @@ app.post("/", urlencodeParser, [
     const alert = errors.array()
     res.render('index', {alert})
   }
+  else {
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'lom360@mail.fresnostate.edu',
+        pass: 'mcmxegxcmyysqyxs'
+      }
+    });
+  
+    var mailOptions = {
+      from: email,
+      to: 'sarom_thin@outlook.com',
+      subject: subject,
+      text: message
+    };
+  
+    transporter.sendMail(mailOptions, function(error, info) {
+      if(error) {
+        console.log(error);
+      } else {
+        console.log("Email Sent: " + info.response)
+      }
+      res.redirect("/");
+      res.redirect("/#contact");
+    })
+  }
 
   var email = req.body.email;
   var name = req.body.name;
