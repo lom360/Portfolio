@@ -1,3 +1,33 @@
 footer {
-    height: 300px;
+    height: 180px;
+}
+
+#the-icons a {
+    width: 100px;
+    height: 100px;
+    background-color: #7546B9;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#the-icons a:nth-child(2) {
+    position: relative;
+    left: 18px;
+}
+
+#the-icons a i {
+    position: relative;
+    margin: auto;
+    color: white;
+    
+}
+
+#the-icons a:first-child i {
+    top: 24px;
+    left: 29px;
+}
+
+#the-icons a:nth-child(2) i {
+    top: 26px;
+    left: 28.5px;
 }
