@@ -38,3 +38,28 @@
     background-color: #8bd450;
     border-color: #8bd450;
 }
+
+@media(max-width: 767px) {
+    #contact {
+        padding: 10px 30px;
+        height: 800px;
+    }
+    .form-control {
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+    .spacer {
+        display: none;
+    }
+    #message {
+        height: 120px !important;
+    }
+    .contact-btn {
+        /* margin-top: 50px; */
+        height: 65px;
+        width: 190px;
+    }
+    .alert {
+        font-size: 0.9rem;
+    }
+}

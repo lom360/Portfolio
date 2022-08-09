@@ -8,11 +8,16 @@ footer {
     background-color: #7546B9;
     justify-content: center;
     border-radius: 50%;
+    transition: ease-in 0.25s;
 }
 
 #the-icons a:nth-child(2) {
     position: relative;
     left: 18px;
+}
+
+#the-icons a:hover {
+    background-color: #8bd450;
 }
 
 #the-icons a i {
