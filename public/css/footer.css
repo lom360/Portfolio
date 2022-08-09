@@ -7,7 +7,13 @@ footer {
 }
 
 h6 a {
+    color: #7546B9;
+    font-weight: 600;
+}
+
+h6 a:hover {
     color: #8bd450;
+    /* font-weight: 600; */
 }
 
 #the-icons a {
