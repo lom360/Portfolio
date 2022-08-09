@@ -2,6 +2,14 @@ footer {
     height: 180px;
 }
 
+.left-footer h5, .left-footer h6{
+    margin: 0px auto;
+}
+
+h6 a {
+    color: #8bd450;
+}
+
 #the-icons a {
     width: 100px;
     height: 100px;
