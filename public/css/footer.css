@@ -1,9 +1,15 @@
 footer {
+    padding: 40px 5px;
     height: 180px;
 }
 
 .left-footer h5, .left-footer h6{
     margin: 0px auto;
+}
+
+.left-footer h5{
+    margin-bottom: 6px;
+
 }
 
 h6 a {
