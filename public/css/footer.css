@@ -1,5 +1,5 @@
 footer {
-    padding: 40px 5px;
+    /* padding: 40px 5px; */
     height: 180px;
 }
 
@@ -9,7 +9,12 @@ footer {
 
 .left-footer h5{
     margin-bottom: 6px;
+    font-size: 0.85rem;
+}
 
+.left-footer h6{
+    margin-bottom: 6px;
+    font-size: 0.75rem;
 }
 
 h6 a {
@@ -23,8 +28,8 @@ h6 a:hover {
 }
 
 #the-icons a {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     background-color: #7546B9;
     justify-content: center;
     border-radius: 50%;
@@ -48,11 +53,15 @@ h6 a:hover {
 }
 
 #the-icons a:first-child i {
-    top: 24px;
-    left: 29px;
+    top: 21px;
+    left: 23px;
 }
 
 #the-icons a:nth-child(2) i {
-    top: 26px;
-    left: 28.5px;
+    top: 22px;
+    left: 23px;
+}
+
+#copyright h5{
+    font-size: 0.90rem;
 }
