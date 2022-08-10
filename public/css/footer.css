@@ -65,3 +65,19 @@ h6 a:hover {
 #copyright h5{
     font-size: 0.90rem;
 }
+
+@media(max-width: 1199px) {
+    footer {
+        height: 210px;
+        padding-top: 17px;
+    }
+    .spacer {
+        display: none;
+    }
+    .left-footer {
+        margin-bottom: 9px;
+    }
+    #the-icons {
+        margin-bottom: 12px;
+    }
+}
