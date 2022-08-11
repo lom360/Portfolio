@@ -45,6 +45,10 @@ app.post("/", urlencodeParser, [
     res.render('index', {alert, success})
   }
   else {
+    var email = req.body.email;
+    var name = req.body.name;
+    var subject = req.body.subject;
+    var message = req.body.message;
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -57,7 +61,7 @@ app.post("/", urlencodeParser, [
       from: email,
       to: 'sarom_thin@outlook.com',
       subject: subject,
-      text: message
+      text: '(Reciepient name:' + name + ')' + message
     };
   
     transporter.sendMail(mailOptions, function(error, info) {
@@ -68,16 +72,11 @@ app.post("/", urlencodeParser, [
       }
       // res.redirect("/");
       // res.redirect("/#contact");
+      const success = 'allPass'
+      const alert = undefined
+      res.render('index',{alert, success});
     })
-    const success = 'allPass'
-    const alert = undefined
-    res.render('index',{alert, success});
   }
-
-  var email = req.body.email;
-  var name = req.body.name;
-  var subject = req.body.name;
-  var message = req.body.message;
 
   // body('email').isEmail();
 
