@@ -20,7 +20,10 @@ app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false})
 // Define the first route
 app.get("/", function (req, res) {
   // res.render('index');
-  res.render('index', {title: 'Message sent. Thank you for your interest.', success: false, errors: req.session.errors});
+  // res.render('index', {title: 'Message sent. Thank you for your interest.', success: false, errors: req.session.errors});
+  const success = 'pending';
+  const alert = undefined;
+  res.render('index', {alert, success});
   req.session.errors = null;
 });
 
@@ -38,7 +41,8 @@ app.post("/", urlencodeParser, [
   // var alert;
   if(!errors.isEmpty()) {
     const alert = errors.array()
-    res.render('index', {alert})
+    const success = 'failed'
+    res.render('index', {alert, success})
   }
   else {
     var transporter = nodemailer.createTransport({
@@ -62,9 +66,12 @@ app.post("/", urlencodeParser, [
       } else {
         console.log("Email Sent: " + info.response)
       }
-      res.redirect("/");
-      res.redirect("/#contact");
+      // res.redirect("/");
+      // res.redirect("/#contact");
     })
+    const success = 'allPass'
+    const alert = undefined
+    res.render('index',{alert, success});
   }
 
   var email = req.body.email;
