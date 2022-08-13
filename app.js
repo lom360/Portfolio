@@ -61,7 +61,7 @@ app.post("/", urlencodeParser, [
       from: email,
       to: 'sarom_thin@outlook.com',
       subject: subject,
-      text: '(Reciepient name:' + name + ')' + message
+      text: '(Reciepient email:' + email + ')___' + '__(Reciepient name:' + name + ')_____' + message
     };
   
     transporter.sendMail(mailOptions, function(error, info) {
