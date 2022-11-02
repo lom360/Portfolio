@@ -154,6 +154,11 @@ function removeNavBar(element,spd1,spd2) {
 	$("#brand").animate({'font-size':'34px'},100);
 	// toggleNav = !toggleNav;
 }
+
+function jumpToContact() {
+	position = $('#contact').offset().top - 55;
+	window.scrollTo(0,position);
+}
 // function navBarToggle(element) {
 // 	if(toggleNav == false) {
 // 		element.classList.add('bg-dark');

@@ -38,17 +38,20 @@ app.post("/", urlencodeParser, [
       .isLength({min: 1})
 ], function (req, res) {
   const errors = validationResult(req);
-  // var alert;
+  var email = req.body.email;
+  var name = req.body.name;
+  var subject = req.body.subject;
+  var message = req.body.message;
   if(!errors.isEmpty()) {
     const alert = errors.array()
     const success = 'failed'
     res.render('index', {alert, success})
   }
   else {
-    var email = req.body.email;
-    var name = req.body.name;
-    var subject = req.body.subject;
-    var message = req.body.message;
+    // var email = req.body.email;
+    // var name = req.body.name;
+    // var subject = req.body.subject;
+    // var message = req.body.message;
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
