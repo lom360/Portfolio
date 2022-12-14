@@ -8,6 +8,8 @@ const expressSession = require('express-session');
 const router = express.Router();
 const app = express();
 
+require("dotenv").config(); // access .env file using process
+
 app.set("view engine", "ejs");
 
 app.use(express.static('public'))
@@ -55,14 +57,14 @@ app.post("/", urlencodeParser, [
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'lom360@mail.fresnostate.edu',
-        pass: 'mcmxegxcmyysqyxs'
+        user: process.env.MAIL_CARRIER,
+        pass: process.env.MAIL_KEY
       }
     });
   
     var mailOptions = {
       from: email,
-      to: 'sarom_thin@outlook.com',
+      to: process.env.MAIL_RECIPIENT,
       subject: subject,
       text: '(Reciepient email:' + email + ')___' + '__(Reciepient name:' + name + ')_____' + message
     };
