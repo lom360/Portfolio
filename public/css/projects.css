@@ -1,6 +1,6 @@
 #projects {
     padding: 100px 50px;
-    height: 1450px;
+    min-height: 1450px;
     max-width: 1500px;
     max-width: 100%;
     /* background-color: #edeeef; */
@@ -33,8 +33,8 @@
 .box {
     height: inherit;
     width: inherit;
-    background-image: linear-gradient(rgba(33, 37, 41, .2), 
-	rgba(33, 37, 41, 0.2) ),url('../img/java-qr.png');
+    /* background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/java-qr.png'); */
     background-repeat: no-repeat;
     background-size: 450px 500px;
     background-position: center center;
@@ -43,8 +43,10 @@
 }
 
 #projects-content a:hover > div{
-    background-image: linear-gradient(rgba(117, 70, 185, .80), 
-	rgba(117, 70, 185, 0.80) ),url('../img/java-qr.png');
+    /* background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/java-qr.png'); */
+    /* background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ); */
     height: 450px;
     width: 400px;
     margin: 30px 35px;
@@ -81,10 +83,110 @@
     top: 5px;
 }
 
+
+.cst300 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst300.png');
+}
+.cst300:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst300.png');
+}
+
+.cst338 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst338.png');
+}
+.cst338:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst338.png') !important;
+}
+
+.cst334 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst334.png');
+}
+.cst334:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst334.png') !important;
+}
+
+.cst363 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst363.png');
+}
+.cst363:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst363.png') !important;
+}
+
+.cst311 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst311.png');
+}
+.cst311:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst311.png') !important;
+}
+
+.cst336 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst336.png');
+}
+.cst336:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst336.png') !important;
+}
+
+.cst328 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst328.png');
+}
+.cst328:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst328.png') !important;
+}
+
+.cst370 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst370.png');
+}
+.cst370:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst370.png') !important;
+}
+
+.cst462s {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst462s.png');
+}
+.cst462s:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst462s.png') !important;
+}
+
+.cst383 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst383.png');
+}
+.cst383:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst383.png') !important;
+}
+
+.cst438 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst438.png');
+}
+.cst438:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst438.png');
+}
+
 @media only screen and (max-width: 1526px) {
     #projects {
         padding: 50px;
-        height: 1800px;
+        min-height: 1800px;
     }
 
     #projects-title {
@@ -95,13 +197,13 @@
 @media only screen and (max-width: 1046px) {
     #projects {
         padding: 10px;
-        height: 1700px;
+        min-height: 1700px;
     }
 }
 
 @media only screen and (max-width: 966px) {
     #projects {
         padding: 10px;
-        height: 3300px;
+        min-height: 3300px;
     }
 }
