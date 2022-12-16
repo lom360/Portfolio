@@ -142,6 +142,12 @@
     background-image: linear-gradient(rgba(33, 37, 41, .2), 
 	rgba(33, 37, 41, 0.2) ),url('../img/cst328.png');
 }
+
+.cst499 {
+    background-image: linear-gradient(rgba(33, 37, 41, .2), 
+	rgba(33, 37, 41, 0.2) ),url('../img/cst499.png');
+}
+
 .cst328:hover {
     background-image: linear-gradient(rgba(117, 70, 185, .80), 
 	rgba(117, 70, 185, 0.80) ),url('../img/cst328.png') !important;
@@ -183,6 +189,11 @@
 	rgba(117, 70, 185, 0.80) ),url('../img/cst438.png');
 }
 
+.cst499:hover {
+    background-image: linear-gradient(rgba(117, 70, 185, .80), 
+	rgba(117, 70, 185, 0.80) ),url('../img/cst499.png');
+}
+
 @media only screen and (max-width: 1526px) {
     #projects {
         padding: 50px;
@@ -206,4 +217,34 @@
         padding: 10px;
         min-height: 3300px;
     }
+}
+/* ************************************************ */
+.box .box-body{
+    display: none;
+    padding: 10px 10px;
+    justify-content: center;
+}
+
+.box:hover .box-body {
+    display: inline !important;
+    color: white !important;
+}
+
+/* .cst300-footer {
+    padding-top: 50px;
+    min-height: 650px;
+} */
+
+.pdf-container {
+    width: 700px;
+    height: 650px;
+}
+
+.weblink {
+    color: #8bd450 !important;
+}
+
+.weblink:hover {
+    text-decoration: underline !important;
+    color: rgba(117, 70, 185, .80) !important;
 }

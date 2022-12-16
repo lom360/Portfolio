@@ -1,0 +1,157 @@
+<br>
+<h5>Client Code</h5>
+<pre><code class="language-python">
+    # Team 5 - Arlon Arriola, Abraham Borg, Mehar Rekhi, Sarom Thin
+    # Client.py
+    # This program sends 10 pings to the server, while tracking the RTT's of the pings. 
+    # It also tracks how many lost packets all the while calculating the min, max, and average RTT's.
+    # EstimatedRTT, devRTT, and timeout interval are also calculated for the interval. 
+    import time
+    import requests
+    from socket import *
+    
+    minRTT = 0 # setting the min of RTT
+    maxRTT = 0 # setting the max of RTT
+    totalRTT = 0 
+    packetLoss = 0 # keeps track of packet loss
+    # Values for calculating estRTT & devRTT
+    estRTT = 0
+    devRTT = 0
+    totalPing = 10 # Ping amount set to 10
+    
+    # This is the function calculates the EstimatedRTT.
+    # The formula is [(1 - alpha)*EstimatedRTT + alpha * sampleRTT] where alpha = 0.125
+    # It requires 3 parameters to be passed: 
+    #   1) currEst: the current value of estimatedRTT stored by estRTT
+    #   2) newSample: the new elapsed time stored by sampleRTT
+    #   3) check: the counter variable from the "for loop" will be passed into this parameter. 
+    #      It will help the function know if it's dealing with the first packet response or not.
+    # This function also has two conditions to be concerned with. Basically there are two scenarios to start the very first calculations.
+    #   1) If the Client received a successful response for the very first packet.
+    #   2) If the Client has not received a successful response for the very first packet.
+    def calculateEstRTT(currEst, newSample, check): # If currEst = 0 then estimatedRTT has not been calculated at all yet.
+        if check == 0 and currEst == 0: # If check = 0 then the function is dealing with the very first packet response.
+            return newSample # For this statement understand if est = a, sample = b and a = b. Then [(1-0.125)*est + (0.125)*sample] = a = b.
+        elif check > 0 and currEst == 0: # If check > 0 then the function is NOT dealing with the very first packet response.
+            return newSample*(0.125) # This statement is equivalent to [0 *(1-0.125) + newSample*(0.125)]
+        else:  # Once the first estRTT gets calculated. Then this condition shall satisfy all other condition. 
+            return currEst*(1-0.125) + newSample*(0.125)
+    
+    # This function calculates the DeviationRTT.
+    # The formula is [(1 - beta)*DeviationRTT + beta*|EstimatedRTT - SampleRTT|] where beta = 0.25
+    # It requires 4 parameters to be passed:
+    #   1) currDev: the current value of deviation stored by devRTT
+    #   2) currEst: the current value of estimatedRTT  stored by estRTT
+    #   3) newSample: the new elapsed time stored by sampleRTT
+    #   4) check: the counter variable from the "for loop" will be passed into this paramter.
+    #      It will help the function know if it's dealing with the first packet response or not.
+    # This function also has two conditions to be concerned with. Basically there are two scenarios to start the very first calculations.
+    #   1) If the Client received a successful response for the very first packet.
+    #   2) If the Client has not received a successful response for the very first packet.
+    def calculateDevRTT(currDev, currEst, newSample, check):
+        if check == 0: # If check = 0 then the function is dealing with the very first packet response.
+            return currEst / 2 # The first devRTT is half of first estRTT.
+        elif check > 0 and currDev == 0: # If check > 0 then the function is NOT dealing with the very first packet response.
+            return 0.25 * abs(newSample - currEst) # This is equivalent to [(1 - beta)*DeviationRTT + beta*|ElapsedTime - EstimatedRTT|]
+        else:   # Once the first devRTT gets calculated. Then this condition shall satisfy all other condition.
+            return currDev*(1-0.25) + 0.25 * abs(currEst - newSample)
+    
+    # This function calculates the Timeout Interval.
+    # The formula is estimatedRTT + (4 * deviationRTT)
+    # It requires 2 parameters to be passed:
+    #   1) currDev: the current value of deviation stored by devRTT
+    #   2) currEst: the current value of estimatedRTT  stored by estRTT
+    def calculateTimeoutInterval(currEst, currDev):
+        return currEst + (4 * currDev)
+    
+    serverName = '10.0.0.2' # Since server's IP address is 10.0.0.2 means that Server code must run on Host 2 on mininet.
+    clientSocket = socket(AF_INET, SOCK_DGRAM)
+    clientSocket.settimeout(1) #This will create a timeout, to wait for a response.
+    for counter  in range(totalPing):
+        message = "Ping" + str(counter + 1) # Plus 1 since loop variable starts at 0.
+        try:
+            startTime = time.time() # Begin timer for the server's response
+            clientSocket.sendto(message.encode(),(serverName, 12000))
+            modifiedMessage, serverAddress = clientSocket.recvfrom(1024)
+            endTime = time.time() # End timer for the server's response
+            
+            # This section updates the values.
+            sampleRTT = ((endTime - startTime) * 1000)
+            totalRTT = totalRTT + sampleRTT
+            maxRTT = max(maxRTT, sampleRTT)
+            minRTT = min(minRTT, sampleRTT) if minRTT != 0 else sampleRTT #min was initialized with 0, so first recorded elapseTime will automatically assign to min.
+            estRTT = calculateEstRTT(estRTT, sampleRTT, counter)
+            devRTT = calculateDevRTT(devRTT, estRTT, sampleRTT, counter)
+    
+            # Print response messge, with the ping times and RTT included.
+            print("Mesg sent: " + message)
+            print("Mesg rcvd: " + modifiedMessage.decode())
+            print("Start time: " + format(startTime, 'e'))
+            print("Return time: " + format(endTime, 'e'))
+            print("PONG " + str(counter + 1) + " RTT: " + str(sampleRTT) + " ms\n")
+    
+        except OSError as msg: # When Client does not receive a response after 1 second. The statements below will be thrown.
+            packetLoss = 1 + packetLoss # Updates the number of loss packets
+            print("Mesg sent: " + message)
+            print("No Mesg rcvd")
+            print("PONG " + str(counter + 1) + " Request Timed out\n")
+    
+    #Display results
+    print("Min RTT:\t\t" + str(minRTT) + " ms")
+    print("Max RTT:\t\t" + str(maxRTT) + " ms")
+    print("Avg RTT:\t\t" + str(totalRTT / (totalPing - packetLoss)) + " ms") # totalPing - packetLoss = total successful ping
+    print("Packet Loss:\t\t" + str(packetLoss / totalPing * 100) + "%")
+    print("Est RTT:\t\t" + str(estRTT) + " ms")
+    print("Dev RTT:\t\t" + str(devRTT) + " ms")
+    print("Timeout Interval:\t" + str(calculateTimeoutInterval(estRTT, devRTT)) + " ms")
+    # Close the socket which ends the process.
+    clientSocket.close()
+</code></pre>
+
+<h5>Server Code</h5>
+<pre><code class="language-python">
+    # Team 5 - Arlon Arriola, Abraham Borg, Mehar Rekhi, Sarom Thin
+    # Server.py
+    # We will need the following module to generate
+    # randomized lost packets
+    import random
+    from socket import *
+    
+    # Create a UDP socket
+    # Notice the use of SOCK_DGRAM for UDP packets
+    serverSocket = socket(AF_INET, SOCK_DGRAM)
+    # Assign IP address and port number to socket
+    serverSocket.bind(('', 12000))
+    # The statment below was added to show the Server process has started.
+    print("Waiting for Client.....\n") 
+    
+    pingnum = 0
+    while True:
+        # Count the pings received
+        # Made to reset after 10 numbers.
+        pingnum = (pingnum + 1) if pingnum <= 9 else 1 # pingnum <= 9 because 9 is the 10th number.
+        # Generate random number in the range of 0 to 10
+        rand = random.randint(0, 10)
+        # Receive the client packet along with the
+        # address it is coming from
+        message, address = serverSocket.recvfrom(1024)
+        # If rand is less is than 4, and this not the
+        # first "ping" of a group of 10, consider the
+        # packet lost and do not respond
+        if rand < 4 and pingnum % 10 != 1:
+            print("\nPacket was lost.\n\n")
+            continue
+        #The commented if statement below will allow very first packet to be lost.
+        #if rand < 4:
+        #    print("\nPacket was lost.\n\n")
+        #    continue
+        # Otherwise, the server responds
+    
+        # Decodes message, modifies message, then sends out the encoded message. 
+        modifiedMessage = message.decode().upper() 
+        serverSocket.sendto(modifiedMessage.encode(), address)
+        # Prints message when message successfully sends.
+        print('PING ' + str(pingnum) + ' Received') 
+        print('Mesg rcvd: ' + message.decode()) 
+        print('Mesg sent: ' + modifiedMessage + '\n')
+</code></pre>
