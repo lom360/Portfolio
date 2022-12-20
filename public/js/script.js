@@ -7,6 +7,7 @@ const enterPortfolio = document.querySelector("#portfolio-btn button");
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const alerter = document.getElementsByClassName("alerter")
 
 hamburger.addEventListener("click", () => {
 	hamburger.classList.toggle("active");
@@ -17,6 +18,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 	hamburger.classList.remove("active");
 	navMenu.classList.remove("active");
 }))
+
+
 // scrollToTop.addEventListener("click", function () {
 // 	$("html, body").animate({scrollTop: 0},1);
 // })
@@ -71,6 +74,11 @@ function repeatedActions() {
 window.onload = function() {
 	checkSize();
 	repeatedActions();
+	console.log(alerter.length)
+	if(alerter.length > 0) {
+		document.getElementById('contact').scrollIntoView()
+		// document.querySelector("#toContact").top - 50
+	}
 }
 function navBarToggle(currentScrollPos, element) { // function navBarToggle(currentScrollPos, element)
 	if(smallScreen ) {

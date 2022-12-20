@@ -40,7 +40,7 @@
         <br>
         <% if(typeof alert != 'undefined') { %>
           <% alert.forEach(function(error) { %>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show alerter" role="alert">
               <%= error.msg %>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -48,7 +48,7 @@
             </div>
           <% }) %>
         <% } else if(success == 'allPass') { %>
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <div class="alert alert-success alert-dismissible fade show alerter" role="alert">
             Message Sent. Thank you for your interest.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>

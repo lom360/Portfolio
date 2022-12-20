@@ -30,7 +30,7 @@ app.get("/", function (req, res) {
 });
 
 // const { body, validationResult } = require('express-validator');
-app.post("/", urlencodeParser, [
+app.post('/', urlencodeParser, [
     check('email', 'Please enter a valid email. i.e. @example.com')
       .isEmail()
       .normalizeEmail(),
@@ -66,8 +66,22 @@ app.post("/", urlencodeParser, [
       from: email,
       to: process.env.MAIL_RECIPIENT,
       subject: subject,
-      text: '(Reciepient email:' + email + ')___' + '__(Reciepient name:' + name + ')_____' + message
+      html: `You got a message from
+      <br>
+      Email:  ${email}
+      <br>
+      Name:   ${name}
+      <br>
+      Message: <br>${message}
+      `
     };
+
+    // var mailOptions = {
+    //   from: email,
+    //   to: process.env.MAIL_RECIPIENT,
+    //   subject: subject,
+    //   text: '(Reciepient email:' + email + ')___' + '__(Reciepient name:' + name + ')_____' + message
+    // };
   
     transporter.sendMail(mailOptions, function(error, info) {
       if(error) {
@@ -79,7 +93,7 @@ app.post("/", urlencodeParser, [
       // res.redirect("/#contact");
       const success = 'allPass'
       const alert = undefined
-      res.render('index',{alert, success});
+      res.render('index', {alert, success});
     })
   }
 
