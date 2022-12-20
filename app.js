@@ -20,7 +20,8 @@ app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false})
 
 
 // Define the first route
-app.get("/", function (req, res) {
+app.get("*", function (req, res) {
+  res.redirect('https://' + req.headers.host + req.url);
   // res.render('index');
   // res.render('index', {title: 'Message sent. Thank you for your interest.', success: false, errors: req.session.errors});
   const success = 'pending';
